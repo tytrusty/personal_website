@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Graphics Final Project Report</title>
+    <title>Protein 3D Structure</title>
     
     <meta name="description" content="">
     
@@ -14,12 +14,22 @@
 
    <!-- Style sheet link -->
     <link href="css/main.css" rel="stylesheet" media="all">
+
+    <script src="js/ngl.dev.js"></script>
+    <script src="js/protein.js"></script>
+    <script>
+        var stage;
+        document.addEventListener("DOMContentLoaded", function () {
+          stage = new NGL.Stage("viewport");
+          stage.loadFile("rcsb://1crn.mmtf", {defaultRepresentation: true});
+        });
+    </script>
     
 </head>
 
 <body>
     <main role="main">
-
+        <div id="viewport" style="width:400px; height:400px"></div>
         <div class="center">
             <h1>Fluid Simulation and Melting</h1>
             <h2>Ty Trusty</h2>
