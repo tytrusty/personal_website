@@ -8,14 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Style sheet link -->
-    <link href="css/main.css" rel="stylesheet" media="all">
+    <link href="css/bio.css" rel="stylesheet" media="all">
     <script src="js/ngl.dev.js"></script>
     <script src="js/protein.js"></script>
     <script>
         var stage;
         document.addEventListener("DOMContentLoaded", function () {
             stage = new NGL.Stage("viewport");
-            stage.loadFile("rcsb://1crn.mmtf", { defaultRepresentation: true });
+            stage.loadFile("rcsb://4hhb.mmtf", { defaultRepresentation: true });
+            stage.setSpin([0, 1, 0], 0.005)
+            // 1crn
         });
     </script>
 
@@ -23,7 +25,7 @@
 
 <body>
     <main role="main">
-        <div id="viewport" style="width:400px; height:400px"></div>
+        <div class="fuckbio" id="viewport" style="width:300px; height:300px;"></div>
         <div class="center">
             <h1>Protein 3D Structure</h1>
             <h3>Ty Trusty, Jake Heald, Alexus Guerra</h2>
@@ -36,10 +38,45 @@
         <h3><u>Tertiary Structure</u></h3>
         <h3><u>Quaternary Structure</u></h3>
         <h3><u>Protein Denaturation & Renaturation</u></h3>
-        
-        
         <h2>Case Study</h2>
         <h2>Quiz</h2>
+        
+        <div class="container">
+            <div class="col-sm-12">
+                <hr>
+                <h3 class="title">Create Quiz with JavaScript && LocalStorage</h3>
+                <hr>
+                <form action="">
+        
+                    <div class="form-group">
+                        <h4>Question 1</h4>
+                        <hr>
+                        <div class="form-radio">
+                            <input type="radio" class="form-radio-input " id="n1" name="name" value="Anthony">
+                            <label class="form-radio-label" for="n1">Anthony</label>
+                        </div>
+                        <div class="form-radio">
+                            <input type="radio" class="form-radio-input" id="n2" name="name" value="Jane Doe">
+                            <label class="form-radio-label" for="n2">Jane Doe</label>
+                        </div>
+                        <div class="form-radio">
+                            <input type="radio" class="form-radio-input" id="n3" name="name" value="James Bond">
+                            <label class="form-radio-label" for="n3">James Bond</label>
+                        </div>
+                        <div class="form-radio">
+                            <input type="radio" class="form-radio-input" id="n4" name="name" value="Agent Vinod" checked>
+                            <label class="form-radio-label" for="n4">Agent Vinod</label>
+                        </div>
+        
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+        
+                <div class="result alert alert-info"></div>
+            </div>
+        
+        </div>
+
 
         <h2>Background</h2>
         <ul>
